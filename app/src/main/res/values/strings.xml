@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Quizzically Fun</string>
+    <string name="introduction">How brand conscious are you?</string>
+    <string name="european_category">European Brands</string>
+    <string name="clue_adidas">A German sports apparel brand</string>
+    <string name="score">0</string>
+    <string name="clue_ferrari">An Italian sports car brand</string>
+    <string name="clue_bic">An French ballpoint pen brand</string>
+    <string name="clue_seat">A Spanish car brand</string>
+    <string name="asian_category">Asian Brands</string>
+    <string name="clue_redbull">A Thai energy drink brand</string>
+    <string name="clue_lg">A Korean electronics brand</string>
+    <string name="clue_mazda">A Japanese car brand</string>
+    <string name="clue_jollibee">A Filipino fastfood chain brand</string>
+    <string name="north_america_category">North American Brands</string>
+    <string name="clue_mcdonalds">A US fastfood chain brand</string>
+    <string name="clue_chevrolet">A US car brand </string>
+    <string name="clue_reebok">A US sport apparel brand </string>
+    <string name="clue_dunlop">A North American tyre brand </string>
+    <string name="result">Are you brand conscious? </string>
+    <string name="reset">Retake Quiz! </string>
+    <string name="international_category">International Brands</string>
+    <string name="choose">What international organizations do these logos stand for? (Choose 2) </string>
+    <string name="united_nations">United Nations</string>
+    <string name="world_wide_fund">World Wide Fund</string>
+    <string name="amnesty_international">Amnesty International</string>
+    <string name="bonus_question">Bonus Question</string>
+    <string name="conscious">Do you think you are brand conscious? </string>
+    <string name="yes">Yes!</string>
+    <string name="no">No!</string>
+</resources>

@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.quizzicallyfun.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:text="@string/app_name"
+            android:textSize="@dimen/app_title_font_size" />
+
+        <TextView
+            android:id="@+id/introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:text="@string/introduction" />
+
+        <TextView
+            android:id="@+id/europe_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/introduction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/side_margins"
+            android:text="@string/european_category"
+            android:textSize="@dimen/category_text_size" />
+
+        <LinearLayout
+            android:id="@+id/adidas_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/europe_category"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/addidas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/adidas" />
+
+            <EditText
+                android:id="@+id/adidas_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_adidas"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/adidas_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ferrari_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adidas_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ferrari"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/ferrari" />
+
+            <EditText
+                android:id="@+id/ferrari_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_ferrari"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/ferrari_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bic_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ferrari_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/bic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/bic" />
+
+            <EditText
+                android:id="@+id/bic_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_bic"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/bic_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seat_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bic_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/seat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/seat" />
+
+            <EditText
+                android:id="@+id/seat_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_seat"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/seat_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/asia_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seat_quiz"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:text="@string/asian_category"
+            android:textSize="@dimen/category_text_size" />
+
+        <LinearLayout
+            android:id="@+id/lg_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/asia_category"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/lg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/lg" />
+
+            <EditText
+                android:id="@+id/lg_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_lg"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/lg_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/redbull_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lg_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/redbull"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/redbull" />
+
+            <EditText
+                android:id="@+id/redbull_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_redbull"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/redbull_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mazda_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redbull_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mazda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/mazda" />
+
+            <EditText
+                android:id="@+id/mazda_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_mazda"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/mazda_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jollibee_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mazda_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/jollibee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/jollibee" />
+
+            <EditText
+                android:id="@+id/jollibee_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_jollibee"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/jollibee_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/us_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jollibee_quiz"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:text="@string/north_america_category"
+            android:textSize="@dimen/category_text_size" />
+
+        <LinearLayout
+            android:id="@+id/mcdonalds_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/us_category"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mcdonalds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/mcdonalds" />
+
+            <EditText
+                android:id="@+id/mcdonalds_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_mcdonalds"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/mcdonalds_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chevrolet_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mcdonalds_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/chevrolet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/chevrolet" />
+
+            <EditText
+                android:id="@+id/chevrolet_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_chevrolet"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/chevrolet_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reebok_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chevrolet_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/reebok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/reebok" />
+
+            <EditText
+                android:id="@+id/reebok_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_reebok"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/reebok_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dunlop_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reebok_quiz"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dunlop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"
+                android:layout_weight="2"
+                android:src="@drawable/dunlop" />
+
+            <EditText
+                android:id="@+id/dunlop_clue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="7"
+                android:hint="@string/clue_dunlop"
+                android:textSize="@dimen/clue_text_size" />
+
+            <TextView
+                android:id="@+id/dunlop_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/clue_text_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/international_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dunlop_quiz"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:text="@string/international_category"
+            android:textSize="@dimen/category_text_size" />
+        <TextView
+            android:id="@+id/choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/international_category"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:layout_marginLeft="@dimen/side_margins"
+            android:layout_marginRight="@dimen/side_margins"
+            android:text="@string/choose"
+            android:textSize="@dimen/button_text_size" />
+
+        <LinearLayout
+            android:id="@+id/international_quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/choose">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/unitednations"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginTop="@dimen/margin_top_title"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:src="@drawable/wwf"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_top_title"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1" >
+                <CheckBox
+                    android:id="@+id/un_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/united_nations"
+                    android:textSize="@dimen/checkbox_text_size"/>
+                <CheckBox
+                    android:id="@+id/wwf_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/world_wide_fund"
+                    android:textSize="@dimen/checkbox_text_size"/>
+                <CheckBox
+                    android:id="@+id/amnesty_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amnesty_international"
+                    android:textSize="@dimen/checkbox_text_size"/>
+            </LinearLayout>
+            <TextView
+                 android:id="@+id/international_score"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginRight="@dimen/side_margins"
+                 android:layout_marginTop="@dimen/margin_clue_top"
+                 android:layout_weight="2"
+                 android:text="@string/score"
+                 android:textSize="@dimen/clue_text_size"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bonus_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/international_quiz"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:text="@string/bonus_question"
+            android:textSize="@dimen/category_text_size" />
+
+        <TextView
+            android:id="@+id/bonus_quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bonus_question"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vertical_margin_between_text"
+            android:layout_marginTop="@dimen/vertical_margin_between_text"
+            android:text="@string/conscious"
+            android:textSize="@dimen/button_text_size" />
+
+        <RadioGroup
+            android:id="@+id/radio_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/bonus_quiz">
+
+            <RadioButton
+                android:id="@+id/yes_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginRight="@dimen/side_margins"
+                android:onClick="choose"/>
+
+            <RadioButton
+                android:id="@+id/no_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginRight="@dimen/side_margins"
+                android:onClick="choose"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/radio_buttons">
+
+            <Button
+                android:id="@+id/result_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/result"
+                android:layout_marginLeft="@dimen/side_margins"
+                android:layout_marginRight="@dimen/horizontal_margin_between_text"
+                android:onClick="result"
+                android:textSize="@dimen/button_text_size"
+                />
+            <TextView
+                android:id="@+id/final_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginRight="@dimen/side_margins"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginTop="@dimen/margin_clue_top"
+                android:layout_weight="1"
+                android:text="@string/score"
+                android:textSize="@dimen/final_score_text_size" />
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/reset"
+                android:layout_marginLeft="@dimen/horizontal_margin_between_text"
+                android:layout_marginRight="@dimen/side_margins"
+                android:onClick="reset"
+                android:textSize="@dimen/clue_text_size"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
